@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arteco S.r.l.</title>
+    <script>
+      ;(() => {
+        const redirect = sessionStorage.getItem('gh-pages-redirect')
+        if (redirect) {
+          sessionStorage.removeItem('gh-pages-redirect')
+          history.replaceState(null, '', redirect)
+          return
+        }
+
+        sessionStorage.setItem(
+          'gh-pages-redirect',
+          location.pathname.replace(/^\/arteco-srl\/?/, '/') +
+            location.search +
+            location.hash,
+        )
+        location.replace('/arteco-srl/')
+      })()
+    </script>
+  </head>
+  <body></body>
+</html>
