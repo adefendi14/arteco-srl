@@ -1,10 +1,12 @@
+import { asset } from './lib/assets'
+
 export const categoryImages = {
-  tubi: '/images/products/tubi.jpg',
-  flange: '/images/products/flange.jpg',
-  raccordi: '/images/products/raccordi.jpg',
-  valvole: '/images/products/valvole.jpg',
-  accessori: '/images/products/accessori.jpg',
-  'arredo-tecnico': '/images/products/arredo-tecnico.jpg',
+  tubi: asset('images/products/tubi.jpg'),
+  flange: asset('images/products/flange.jpg'),
+  raccordi: asset('images/products/raccordi.jpg'),
+  valvole: asset('images/products/valvole.jpg'),
+  accessori: asset('images/products/accessori.jpg'),
+  'arredo-tecnico': asset('images/products/arredo-tecnico.jpg'),
 }
 
 export function getProductImage(product) {
@@ -458,7 +460,7 @@ export const copy = {
     ctaProducts: 'Esplora prodotti',
     ctaQuote: 'Richiedi preventivo',
     imageAlt: 'Componenti industriali in acciaio inox',
-    imageSrc: '/images/hero.jpg',
+    imageSrc: asset('images/hero.jpg'),
   },
   about: {
     kicker: 'Chi siamo',
@@ -469,7 +471,7 @@ export const copy = {
     p2After: ' e documentazione tecnica completa, per garantire tracciabilità e conformità alle normative di riferimento.',
     p3: 'Il nostro obiettivo è ridurre i tempi di approvvigionamento e offrire un interlocutore unico per componentistica inox e servizi correlati.',
     imageAlt: 'Magazzino componenti industriali',
-    imageSrc: '/images/about.jpg',
+    imageSrc: asset('images/about.jpg'),
   },
   sectors: {
     kicker: 'Settori',
