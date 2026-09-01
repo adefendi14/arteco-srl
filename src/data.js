@@ -526,10 +526,15 @@ export const copy = {
     message: 'Messaggio',
     messagePlaceholder: 'Descrivete quantità, materiali, normative e tempi di consegna...',
     submit: 'Invia richiesta',
+    sending: 'Invio in corso…',
     sentTitle: 'Richiesta inviata',
     sentBody: (name) =>
       `Grazie ${name}. Abbiamo registrato la vostra richiesta: Riccardo vi contatterà a breve all’indirizzo indicato.`,
     sendAnother: 'Invia un’altra richiesta',
+    errorBody:
+      'Non siamo riusciti a inviare la richiesta. Riprovate tra qualche minuto o contattateci direttamente via email.',
+    missingKey:
+      'Il modulo non è ancora configurato. Contattateci direttamente via email indicata a lato.',
     address: 'Sede',
     hours: 'Orari',
     weekdays: 'Lun–Ven',

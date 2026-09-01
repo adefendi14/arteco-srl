@@ -14,16 +14,67 @@ export default function QuoteForm() {
   const content = copy.contact
   const [form, setForm] = useState(emptyForm)
   const [sent, setSent] = useState(null)
+  const [status, setStatus] = useState('idle')
+  const [error, setError] = useState('')
+
+  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
 
   const onChange = (event) => {
     const { name, value } = event.target
     setForm((current) => ({ ...current, [name]: value }))
   }
 
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault()
-    setSent({ ...form })
-    setForm(emptyForm)
+    setError('')
+
+    if (!accessKey) {
+      setError(content.missingKey)
+      return
+    }
+
+    setStatus('sending')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `[Preventivo Arteco] ${form.product} — ${form.company}`,
+          from_name: form.name,
+          name: form.name,
+          email: form.email,
+          phone: form.phone || 'Non indicato',
+          company: form.company,
+          product: form.product,
+          message: [
+            `Azienda: ${form.company}`,
+            `Telefono: ${form.phone || 'Non indicato'}`,
+            `Prodotto/servizio: ${form.product}`,
+            '',
+            form.message,
+          ].join('\n'),
+          botcheck: '',
+        }),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || content.errorBody)
+      }
+
+      setSent({ ...form })
+      setForm(emptyForm)
+      setStatus('idle')
+    } catch {
+      setStatus('idle')
+      setError(content.errorBody)
+    }
   }
 
   const fieldClass =
@@ -50,6 +101,15 @@ export default function QuoteForm() {
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4 sm:grid-cols-2">
+      <input
+        type="checkbox"
+        name="botcheck"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
+
       <label className="sm:col-span-2">
         <span className="text-xs font-semibold uppercase tracking-[0.14em] text-ink/55">
           {content.name}
@@ -63,6 +123,7 @@ export default function QuoteForm() {
           value={form.name}
           onChange={onChange}
           className={fieldClass}
+          disabled={status === 'sending'}
         />
       </label>
       <label className="sm:col-span-2">
@@ -78,6 +139,7 @@ export default function QuoteForm() {
           value={form.company}
           onChange={onChange}
           className={fieldClass}
+          disabled={status === 'sending'}
         />
       </label>
       <label>
@@ -93,6 +155,7 @@ export default function QuoteForm() {
           value={form.email}
           onChange={onChange}
           className={fieldClass}
+          disabled={status === 'sending'}
         />
       </label>
       <label>
@@ -107,6 +170,7 @@ export default function QuoteForm() {
           value={form.phone}
           onChange={onChange}
           className={fieldClass}
+          disabled={status === 'sending'}
         />
       </label>
       <label className="sm:col-span-2">
@@ -119,6 +183,7 @@ export default function QuoteForm() {
           value={form.product}
           onChange={onChange}
           className={fieldClass}
+          disabled={status === 'sending'}
         >
           <option value="">{content.productPlaceholder}</option>
           {quoteProductOptions.map((option) => (
@@ -140,14 +205,21 @@ export default function QuoteForm() {
           value={form.message}
           onChange={onChange}
           className={`${fieldClass} resize-y`}
+          disabled={status === 'sending'}
         />
       </label>
       <div className="sm:col-span-2">
+        {error && (
+          <p className="mb-4 rounded-xl border border-terracotta/25 bg-terracotta/5 px-4 py-3 text-sm text-ink/75" role="alert">
+            {error}
+          </p>
+        )}
         <button
           type="submit"
-          className="inline-flex w-full items-center justify-center rounded-full bg-terracotta px-6 py-3.5 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#8d3e23] sm:w-auto"
+          disabled={status === 'sending'}
+          className="inline-flex w-full items-center justify-center rounded-full bg-terracotta px-6 py-3.5 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#8d3e23] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 sm:w-auto"
         >
-          {content.submit}
+          {status === 'sending' ? content.sending : content.submit}
         </button>
         <p className="mt-4 text-xs text-ink/50">
           Referente commerciale: {company.referent} · {company.email}
