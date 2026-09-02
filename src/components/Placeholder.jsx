@@ -32,7 +32,7 @@ export default function Placeholder({
         className="absolute inset-0 opacity-70"
         style={{
           backgroundImage: `
-            linear-gradient(135deg, #f3ece0 0%, #e6dccb 48%, #f3ece0 100%),
+            linear-gradient(135deg, #f3e8e6 0%, #dfc9c5 48%, #f3e8e6 100%),
             repeating-linear-gradient(
               45deg,
               transparent,

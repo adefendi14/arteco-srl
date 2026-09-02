@@ -38,7 +38,7 @@ export default function Prodotti() {
                 onClick={() => setActive(category.id)}
                 className={`shrink-0 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
                   isActive
-                    ? 'bg-terracotta text-cream shadow-[0_10px_24px_-12px_rgba(166,75,42,0.7)]'
+                    ? 'bg-terracotta text-cream shadow-[0_10px_24px_-12px_rgba(175,48,38,0.55)]'
                     : 'bg-sand text-ink/70 hover:bg-hazel hover:text-ink'
                 }`}
               >

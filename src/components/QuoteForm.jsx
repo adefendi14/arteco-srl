@@ -83,7 +83,7 @@ export default function QuoteForm() {
   if (sent) {
     return (
       <div
-        className="rounded-2xl border border-gold/30 bg-cream px-6 py-8"
+          className="rounded-2xl border border-accent/30 bg-cream px-6 py-8"
         role="status"
       >
         <p className="text-2xl font-semibold text-ink">{content.sentTitle}</p>
@@ -217,7 +217,7 @@ export default function QuoteForm() {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="inline-flex w-full items-center justify-center rounded-full bg-terracotta px-6 py-3.5 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#8d3e23] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 sm:w-auto"
+          className="inline-flex w-full items-center justify-center rounded-full bg-terracotta px-6 py-3.5 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-bordeaux disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 sm:w-auto"
         >
           {status === 'sending' ? content.sending : content.submit}
         </button>

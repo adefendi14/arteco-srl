@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #fdfbf7;
-  --color-ink: #1a1615;
-  --color-sand: #f3ece0;
-  --color-hazel: #e6dccb;
-  --color-terracotta: #a64b2a;
-  --color-gold: #c88a36;
+  --color-cream: #fbf8f7;
+  --color-ink: #181010;
+  --color-sand: #f3e8e6;
+  --color-hazel: #dfc9c5;
+  --color-terracotta: #af3026;
+  --color-bordeaux: #882620;
+  --color-accent: #d03a2c;
+  --color-gold: #c9564a;
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -40,7 +42,7 @@ body::before {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-gold) 35%, transparent);
+  background: color-mix(in srgb, var(--color-accent) 35%, transparent);
   color: var(--color-ink);
 }
 
@@ -67,4 +69,20 @@ html::-webkit-scrollbar-button {
   display: none;
   height: 0;
   width: 0;
+}
+
+@keyframes scroll-nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+.animate-scroll-nudge {
+  animation: scroll-nudge 1.6s ease-in-out infinite;
 }

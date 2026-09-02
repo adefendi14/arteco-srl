@@ -74,7 +74,7 @@ export default function Azienda() {
           <div className="mt-12">
             <Link
               to="/contatti"
-              className="inline-flex items-center justify-center rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#8d3e23]"
+              className="inline-flex items-center justify-center rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-bordeaux"
             >
               Parla con un referente
             </Link>

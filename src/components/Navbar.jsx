@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <Link
             to="/contatti"
-            className="hidden rounded-full bg-terracotta px-5 py-2.5 text-[0.78rem] font-semibold tracking-wide text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#8d3e23] lg:inline-flex"
+            className="hidden rounded-full bg-terracotta px-5 py-2.5 text-[0.78rem] font-semibold tracking-wide text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-bordeaux lg:inline-flex"
           >
             Preventivo
           </Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
           <Link
             to="/contatti"
             onClick={close}
-            className="mt-3 inline-flex items-center justify-center rounded-full bg-terracotta px-5 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:bg-[#8d3e23]"
+            className="mt-3 inline-flex items-center justify-center rounded-full bg-terracotta px-5 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:bg-bordeaux"
           >
             Preventivo
           </Link>

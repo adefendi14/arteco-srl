@@ -49,7 +49,7 @@ export default function Hero() {
               className="absolute inset-0 opacity-80"
               style={{
                 backgroundImage: `
-                  linear-gradient(160deg, #1a1615 0%, #3d2a22 35%, #6b4a38 65%, #a64b2a 100%),
+                  linear-gradient(160deg, #181010 0%, #3a1818 35%, #6b2820 65%, #af3026 100%),
                   repeating-linear-gradient(
                     45deg,
                     transparent,
@@ -76,7 +76,7 @@ export default function Hero() {
             }`}
             style={{ transitionDelay: '120ms' }}
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             {content.kicker}
           </p>
 
@@ -106,13 +106,13 @@ export default function Hero() {
           >
             <Link
               to="/prodotti"
-              className="inline-flex items-center justify-center rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#8d3e23]"
+              className="inline-flex items-center justify-center rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-bordeaux"
             >
               {content.ctaProducts}
             </Link>
             <Link
               to="/contatti"
-              className="inline-flex items-center justify-center rounded-full border border-cream/30 bg-cream/10 px-6 py-3 text-sm font-semibold text-cream backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-gold hover:text-gold"
+              className="inline-flex items-center justify-center rounded-full border border-cream/30 bg-cream/10 px-6 py-3 text-sm font-semibold text-cream backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
             >
               {content.ctaQuote}
             </Link>
@@ -126,9 +126,20 @@ export default function Hero() {
         aria-hidden="true"
       >
         <span className="text-[0.65rem] font-medium uppercase tracking-[0.22em]">Scorri</span>
-        <span className="flex h-10 w-6 items-start justify-center rounded-full border border-cream/25 p-1.5">
-          <span className="h-2 w-0.5 animate-bounce rounded-full bg-cream/60" />
-        </span>
+        <svg
+          viewBox="0 0 24 24"
+          className="h-6 w-6 animate-scroll-nudge text-cream/60"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M12 5v12M12 17l-5-5M12 17l5-5"
+            stroke="currentColor"
+            strokeWidth="1.75"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </div>
     </section>
   )

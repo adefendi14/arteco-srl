@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-ink text-cream">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3 md:px-8">
         <div>
-          <Logo variant="light" />
+          <Logo tone="light" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream/60">
             {copy.footer.blurb}
           </p>

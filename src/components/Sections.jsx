@@ -79,7 +79,7 @@ export function ServicesPreview() {
               key={service.id}
               className={`rounded-2xl border px-7 py-8 ${
                 service.featured
-                  ? 'border-gold/40 bg-cream shadow-[0_18px_36px_-24px_rgba(200,138,54,0.25)]'
+                  ? 'border-gold/40 bg-cream shadow-[0_18px_36px_-24px_rgba(208,58,44,0.18)]'
                   : 'border-ink/8 bg-cream'
               }`}
             >
@@ -106,7 +106,7 @@ export function ServicesPreview() {
         <div className="mt-10 text-center">
           <Link
             to="/servizi"
-            className="inline-flex items-center justify-center rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#8d3e23]"
+            className="inline-flex items-center justify-center rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-bordeaux"
           >
             {content.viewAll}
           </Link>
@@ -210,7 +210,7 @@ export function TestimonialsSection() {
 
 export function CtaBanner() {
   return (
-    <section className="bg-ink text-cream">
+    <section className="bg-bordeaux text-cream">
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 py-14 md:flex-row md:items-center md:px-8">
         <div>
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
@@ -222,7 +222,7 @@ export function CtaBanner() {
         </div>
         <Link
           to="/contatti"
-          className="inline-flex shrink-0 items-center justify-center rounded-full bg-terracotta px-6 py-3.5 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#8d3e23]"
+          className="inline-flex shrink-0 items-center justify-center rounded-full bg-terracotta px-6 py-3.5 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-bordeaux"
         >
           Contattaci
         </Link>
