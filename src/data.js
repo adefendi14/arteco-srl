@@ -639,7 +639,7 @@ export const strengths = [
   },
   {
     id: 'preventivo',
-    title: 'Preventivo rapido',
+    title: 'Richiesta rapida',
     description: 'Canale diretto con Riccardo per distinte, specifiche e alternative.',
   },
 ]
@@ -713,7 +713,7 @@ export const copy = {
     title: 'Valvole e pacchetti piping per impianti industriali',
     lead: 'Fornitura di valvole e componenti piping in acciaio inox, carbonio e leghe speciali. Pacchetti su distinta, magazzino e service di revisione valvole di sicurezza.',
     ctaProducts: 'Esplora prodotti',
-    ctaQuote: 'Richiedi preventivo',
+    ctaQuote: 'Richiedi informazioni',
     imageAlt: 'Valvole e piping su impianto industriale',
     imageSrc: asset('images/hero.jpg'),
   },
@@ -786,7 +786,7 @@ export const copy = {
     lead: 'Inviate il materiale all’ufficio acquisti: vi ricontattiamo con disponibilità e alternative.',
     mail: 'Scrivi a Riccardo',
     form: 'Apri il form',
-    quote: 'Richiedi preventivo',
+    quote: 'Richiedi informazioni',
   },
   services: {
     kicker: 'Servizi',
@@ -812,7 +812,7 @@ export const copy = {
     title: 'Come lavoriamo',
   },
   contact: {
-    kicker: 'Preventivi',
+    kicker: 'Informazioni',
     title: 'Parliamo della vostra distinta',
     lead: 'Compilate il modulo o scrivete a buyer@artecovalvole.it. Referente: Riccardo.',
     name: 'Nome e cognome',

@@ -63,7 +63,7 @@ export default function QuoteForm() {
     try {
       const payload = new FormData()
       payload.append('access_key', accessKey)
-      payload.append('subject', `[Preventivo Arteco] ${form.product} — ${form.company}`)
+      payload.append('subject', `[Richiesta Arteco] ${form.product} — ${form.company}`)
       payload.append('from_name', form.name)
       payload.append('name', form.name)
       payload.append('email', form.email)
