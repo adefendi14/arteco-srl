@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { getProductImage, productCopy } from '../data'
+import { getCategory, getProductImage, productCopy } from '../data'
 import Placeholder from './Placeholder'
 
 export default function ProductCard({ product }) {
@@ -42,7 +42,7 @@ export default function ProductCard({ product }) {
           </ul>
         )}
         <Link
-          to="/contatti"
+          to={`/contatti?prodotto=${encodeURIComponent(getCategory(product.category)?.label || copy.name)}#preventivo`}
           className="mt-5 inline-flex text-sm font-semibold text-terracotta transition-colors duration-300 hover:text-ink"
         >
           Richiedi preventivo →

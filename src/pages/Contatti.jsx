@@ -1,3 +1,4 @@
+import MapEmbed from '../components/MapEmbed'
 import QuoteForm from '../components/QuoteForm'
 import SectionHeader from '../components/SectionHeader'
 import { company, copy } from '../data'
@@ -10,7 +11,7 @@ export default function Contatti() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div>
           <SectionHeader kicker={content.kicker} title={content.title} lead={content.lead} />
-          <div className="mt-8">
+          <div id="preventivo" className="mt-8 scroll-mt-28">
             <QuoteForm />
           </div>
         </div>
@@ -31,6 +32,17 @@ export default function Contatti() {
               </a>
               <span className="mx-2 text-ink/25">·</span>
               <a
+                href={`tel:${company.phoneAlt.replace(/\s/g, '')}`}
+                className="text-terracotta transition-colors duration-300 hover:text-ink"
+              >
+                {company.phoneAlt}
+              </a>
+            </p>
+            <p className="mt-2 text-sm text-ink/65">
+              {content.fax}: {company.fax}
+            </p>
+            <p className="mt-2 text-sm">
+              <a
                 href={`mailto:${company.email}`}
                 className="text-terracotta transition-colors duration-300 hover:text-ink"
               >
@@ -40,28 +52,11 @@ export default function Contatti() {
             <p className="mt-3 text-sm text-ink/60">
               Referente: <strong className="text-ink">{company.referent}</strong>
             </p>
+            <p className="mt-3 text-sm text-ink/55">{company.vat}</p>
           </address>
 
-          <div className="mt-8 border-t border-ink/10 pt-6">
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-ink/45">
-              {content.hours}
-            </p>
-            <ul className="mt-3 space-y-2 text-sm text-ink/75">
-              <li className="flex flex-col gap-0.5 sm:flex-row sm:justify-between">
-                <span className="font-medium text-ink">{content.weekdays}</span>
-                <span>{content.hoursSlots}</span>
-              </li>
-            </ul>
-          </div>
-
           <div className="mt-8 overflow-hidden rounded-xl border border-ink/8">
-            <iframe
-              title={content.mapTitle}
-              src="https://maps.google.com/maps?q=Via%20dell%27Industria%2000%2C%20Milano&z=14&output=embed"
-              className="h-64 w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            <MapEmbed title={content.mapTitle} src={company.mapEmbed} />
           </div>
         </aside>
       </div>

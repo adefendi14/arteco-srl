@@ -42,7 +42,8 @@ export default function Hero() {
             <img
               src={content.imageSrc}
               alt={content.imageAlt}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-[center_35%]"
+              fetchPriority="high"
             />
           ) : (
             <div
@@ -111,7 +112,7 @@ export default function Hero() {
               {content.ctaProducts}
             </Link>
             <Link
-              to="/contatti"
+              to="/contatti#preventivo"
               className="inline-flex items-center justify-center rounded-full border border-cream/30 bg-cream/10 px-6 py-3 text-sm font-semibold text-cream backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
             >
               {content.ctaQuote}

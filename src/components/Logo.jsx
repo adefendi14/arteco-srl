@@ -7,7 +7,7 @@ export default function Logo({ onClick, tone = 'dark' }) {
     tone === 'light' ? 'text-cream/50' : 'text-ink/55'
 
   return (
-    <Link to="/" onClick={onClick} className="group flex items-center gap-3">
+    <Link to="/" onClick={onClick} className="group flex flex-col items-start gap-0.5">
       <img
         src={asset('logo-arteco.png')}
         alt={company.name}
@@ -15,10 +15,10 @@ export default function Logo({ onClick, tone = 'dark' }) {
         width={1211}
         height={580}
       />
-      <span className="hidden min-w-0 leading-tight min-[520px]:block">
-        <span className={`block text-[0.62rem] font-medium uppercase tracking-[0.18em] ${taglineClass}`}>
-          {company.tagline}
-        </span>
+      <span
+        className={`text-[0.62rem] font-medium uppercase leading-none tracking-[0.18em] ${taglineClass}`}
+      >
+        {company.tagline}
       </span>
     </Link>
   )

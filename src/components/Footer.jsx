@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { company, copy, navLinks } from '../data'
+import { company, copy, legalLinks, navLinks } from '../data'
 import Logo from './Logo'
 
 export default function Footer() {
@@ -25,21 +25,13 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
-            <li>
-              <a href="#privacy" className="transition-colors duration-300 hover:text-cream">
-                {copy.footer.privacy}
-              </a>
-            </li>
-            <li>
-              <a href="#cookie" className="transition-colors duration-300 hover:text-cream">
-                {copy.footer.cookie}
-              </a>
-            </li>
-            <li>
-              <a href="#note-legali" className="transition-colors duration-300 hover:text-cream">
-                {copy.footer.legalNotice}
-              </a>
-            </li>
+            {legalLinks.map((link) => (
+              <li key={link.href}>
+                <Link to={link.href} className="transition-colors duration-300 hover:text-cream">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -65,13 +57,21 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <a
+                href={`tel:${company.phoneAlt.replace(/\s/g, '')}`}
+                className="transition-colors duration-300 hover:text-cream"
+              >
+                {company.phoneAlt}
+              </a>
+            </li>
+            <li>
               {company.address}, {company.city}
             </li>
           </ul>
           <p className="mt-6 text-xs leading-relaxed text-cream/45">
             {company.vat}
             <br />
-            {copy.footer.placeholderNote}
+            REA {company.rea} · PEC {company.pec}
           </p>
         </div>
       </div>

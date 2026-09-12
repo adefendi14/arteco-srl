@@ -1,12 +1,15 @@
 import Hero from '../components/Hero'
 import ScrollReveal from '../components/ScrollReveal'
 import {
+  AboutPreview,
   CertificationsSection,
   CtaBanner,
   PartnersSection,
   ProductsPreview,
   SectorsPreview,
   ServicesPreview,
+  StrengthsSection,
+  TargetPreview,
   TestimonialsSection,
 } from '../components/Sections'
 
@@ -15,13 +18,22 @@ export default function Home() {
     <>
       <Hero />
       <ScrollReveal>
-        <SectorsPreview />
+        <AboutPreview />
+      </ScrollReveal>
+      <ScrollReveal delay={80}>
+        <TargetPreview />
       </ScrollReveal>
       <ScrollReveal delay={80}>
         <ProductsPreview />
       </ScrollReveal>
       <ScrollReveal delay={80}>
         <ServicesPreview />
+      </ScrollReveal>
+      <ScrollReveal delay={80}>
+        <SectorsPreview />
+      </ScrollReveal>
+      <ScrollReveal delay={80}>
+        <StrengthsSection />
       </ScrollReveal>
       <ScrollReveal delay={80}>
         <CertificationsSection />

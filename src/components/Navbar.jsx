@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { navLinks } from '../data'
+import { copy, navLinks, productCategories } from '../data'
 import Logo from './Logo'
 
 export default function Navbar() {
@@ -19,6 +19,7 @@ export default function Navbar() {
   }, [location.pathname])
 
   const close = () => setOpen(false)
+  const prodottiActive = location.pathname.startsWith('/prodotti')
 
   return (
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-cream/95 backdrop-blur-md">
@@ -27,6 +28,42 @@ export default function Navbar() {
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Navigazione principale">
           {navLinks.map((link) => {
+            if (link.href === '/prodotti') {
+              return (
+                <div key={link.href} className="group relative">
+                  <Link
+                    to={link.href}
+                    className={`inline-flex items-center gap-1 text-[0.82rem] font-medium tracking-wide transition-colors duration-300 ${
+                      prodottiActive ? 'text-terracotta' : 'text-ink/70 hover:text-terracotta'
+                    }`}
+                  >
+                    {link.label}
+                    <span aria-hidden="true" className="text-[0.65rem]">
+                      ▾
+                    </span>
+                  </Link>
+                  <div className="invisible absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <ul className="rounded-2xl border border-ink/8 bg-cream py-2 shadow-[0_18px_40px_-24px_rgba(26,22,21,0.45)]">
+                      {productCategories.map((category) => (
+                        <li key={category.id}>
+                          <Link
+                            to={category.href}
+                            className={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                              location.pathname === category.href
+                                ? 'text-terracotta'
+                                : 'text-ink/70 hover:bg-sand hover:text-terracotta'
+                            }`}
+                          >
+                            {category.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )
+            }
+
             const active = location.pathname === link.href
             return (
               <Link
@@ -44,10 +81,10 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <Link
-            to="/contatti"
+            to="/contatti#preventivo"
             className="hidden rounded-full bg-terracotta px-5 py-2.5 text-[0.78rem] font-semibold tracking-wide text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-bordeaux lg:inline-flex"
           >
-            Preventivo
+            {copy.cta.quote}
           </Link>
 
           <button
@@ -80,28 +117,40 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div
-        id="menu-mobile"
-        hidden={!open}
-        className="border-t border-ink/8 bg-cream lg:hidden"
-      >
+      <div id="menu-mobile" hidden={!open} className="border-t border-ink/8 bg-cream lg:hidden">
         <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-6" aria-label="Navigazione mobile">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              to={link.href}
-              onClick={close}
-              className="rounded-xl px-3 py-3 text-2xl font-semibold text-ink transition-colors duration-300 hover:bg-sand hover:text-terracotta"
-            >
-              {link.label}
-            </Link>
+            <div key={link.href}>
+              <Link
+                to={link.href}
+                onClick={close}
+                className="rounded-xl px-3 py-3 text-2xl font-semibold text-ink transition-colors duration-300 hover:bg-sand hover:text-terracotta"
+              >
+                {link.label}
+              </Link>
+              {link.href === '/prodotti' && (
+                <ul className="mb-2 ml-3 grid gap-1">
+                  {productCategories.map((category) => (
+                    <li key={category.id}>
+                      <Link
+                        to={category.href}
+                        onClick={close}
+                        className="block rounded-lg px-3 py-2 text-base text-ink/65 transition-colors hover:bg-sand hover:text-terracotta"
+                      >
+                        {category.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           ))}
           <Link
-            to="/contatti"
+            to="/contatti#preventivo"
             onClick={close}
             className="mt-3 inline-flex items-center justify-center rounded-full bg-terracotta px-5 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:bg-bordeaux"
           >
-            Preventivo
+            {copy.cta.quote}
           </Link>
         </nav>
       </div>
