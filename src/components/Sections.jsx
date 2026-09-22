@@ -193,7 +193,7 @@ export function ServicesPreview() {
           lead={content.lead}
           align="center"
         />
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <article
               key={service.id}
@@ -210,16 +210,18 @@ export function ServicesPreview() {
               )}
               <h3 className="text-2xl font-semibold text-ink">{service.title}</h3>
               <p className="mt-3 leading-relaxed text-ink/70">{service.description}</p>
-              <ul className="mt-5 space-y-1.5 text-sm text-ink/65">
-                {service.highlights.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <span className="text-gold" aria-hidden="true">
-                      ·
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              {service.highlights?.length > 0 ? (
+                <ul className="mt-5 space-y-1.5 text-sm text-ink/65">
+                  {service.highlights.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span className="text-gold" aria-hidden="true">
+                        ·
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </article>
           ))}
         </div>
@@ -288,9 +290,6 @@ export function CertificationsSection() {
             </li>
           ))}
         </ul>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-ink/50">
-          {content.disclaimer}
-        </p>
       </div>
     </section>
   )
@@ -305,22 +304,10 @@ export function TestimonialsSection() {
         <SectionHeader kicker={content.kicker} title={content.title} align="center" />
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {testimonials.map((item) => (
-            <blockquote
-              key={item.id}
-              className="flex flex-col rounded-2xl bg-sand px-7 py-8"
-            >
-              <p className="flex-1 text-xl font-medium leading-relaxed text-ink">
-                “{item.quote}”
-              </p>
-              <footer className="mt-8 border-t border-ink/10 pt-4">
-                <cite className="not-italic">
-                  <span className="block text-sm font-semibold text-ink">{item.name}</span>
-                  <span className="mt-0.5 block text-xs tracking-wide text-ink/50">
-                    {item.company}
-                  </span>
-                </cite>
-              </footer>
-            </blockquote>
+            <article key={item.id} className="rounded-2xl bg-sand px-7 py-8">
+              <h3 className="text-xl font-semibold text-ink">{item.name}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink/65">{item.quote}</p>
+            </article>
           ))}
         </div>
       </div>

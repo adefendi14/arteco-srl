@@ -50,7 +50,7 @@ export default function Contatti() {
               </a>
             </p>
             <p className="mt-3 text-sm text-ink/60">
-              Referente: <strong className="text-ink">{company.referent}</strong>
+              {company.referent}
             </p>
             <p className="mt-3 text-sm text-ink/55">{company.vat}</p>
           </address>

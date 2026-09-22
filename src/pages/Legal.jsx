@@ -53,7 +53,7 @@ export default function LegalPage({ doc }) {
   useEffect(() => {
     if (!page) return undefined
     const previous = document.title
-    document.title = `${page.title} — Arteco S.r.l.`
+    document.title = `${page.title}, Arteco S.r.l.`
     return () => {
       document.title = previous
     }

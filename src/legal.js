@@ -2,7 +2,7 @@ import { company } from './data'
 
 export const legalUpdatedAt = '12 settembre 2026'
 
-const site = `${company.name} — ${company.tagline}`
+const site = `${company.name}, ${company.tagline}`
 const fullAddress = `${company.address}, ${company.city}`
 
 export const legalPages = {
@@ -266,7 +266,7 @@ export const legalPages = {
               `Email: ${company.emailInfo}`,
               `Telefono: ${company.phone} · ${company.phoneAlt}`,
               `Fax: ${company.fax}`,
-              `Referente commerciale indicato sul sito: ${company.referent}`,
+              `Contatto indicato sul sito: ${company.referent}`,
             ],
           },
         ],

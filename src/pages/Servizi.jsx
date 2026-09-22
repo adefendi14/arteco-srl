@@ -45,16 +45,18 @@ export default function Servizi() {
                     {copy.cta.quote}
                   </Link>
                 </div>
-                <ul className="mt-6 grid gap-2 sm:grid-cols-3">
-                  {service.highlights.map((item) => (
-                    <li
-                      key={item}
-                      className="rounded-xl bg-cream px-4 py-3 text-sm text-ink/70"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                {service.highlights?.length > 0 ? (
+                  <ul className="mt-6 grid gap-2 sm:grid-cols-3">
+                    {service.highlights.map((item) => (
+                      <li
+                        key={item}
+                        className="rounded-xl bg-cream px-4 py-3 text-sm text-ink/70"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </article>
             ))}
           </div>

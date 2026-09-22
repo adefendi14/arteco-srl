@@ -24,7 +24,7 @@ export const company = {
   email: 'buyer@artecovalvole.it',
   emailInfo: 'info@artecovalvole.it',
   pec: 'artecopec@pec.artecovalvole.it',
-  referent: 'Riccardo',
+  referent: 'Servizio clienti',
   vat: 'P.IVA e C.F. 03800210969',
   rea: 'MI-1703012',
   shareCapital: '€ 20.000',
@@ -47,7 +47,6 @@ export const certifications = ['PED', 'ATEX', 'FDA']
 export const partners = [
   { id: 'ghidini', name: '4G Ghidini', initials: '4G' },
   { id: 'az', name: 'AZ Armaturen', initials: 'AZ' },
-  { id: 'zema', name: 'Zema', initials: 'Z' },
 ]
 
 export const sectors = [
@@ -111,7 +110,7 @@ export const productCategories = [
     ],
     specs: [
       { label: 'Materiali', value: 'AISI 304/L · 316/L · A106 Gr.B · API 5L' },
-      { label: 'Range DN', value: 'Da ½" a 24" — altri diametri su richiesta' },
+      { label: 'Range DN', value: 'Da ½" a 24", altri diametri su richiesta' },
       { label: 'Pressione', value: 'Secondo schedula ASTM / ASME (B36.10 e B36.19)' },
       { label: 'Normative', value: 'ASTM A312 · ANSI B36.19 / B36.10 · ASTM A213 / A269' },
       { label: 'Documentazione', value: '3.1 / PED su richiesta' },
@@ -203,7 +202,7 @@ export const productCategories = [
     ],
     specs: [
       { label: 'Materiali', value: 'AISI 304 / 316' },
-      { label: 'Range DN', value: 'Non applicabile — arredo su misura' },
+      { label: 'Range DN', value: 'Non applicabile, arredo su misura' },
       { label: 'Pressione', value: 'Non applicabile' },
       { label: 'Normative', value: 'Su misura per aree produttive, farmaceutica e biomedicale' },
       { label: 'Documentazione', value: 'FDA dove richiesto' },
@@ -552,33 +551,52 @@ export const aboutGallery = [
 
 export const services = [
   {
-    id: 'pacchetti-piping',
-    title: 'Pacchetti piping',
+    id: 'fornitura-componenti',
+    title: 'Fornitura di componenti per impianti industriali',
     description:
-      'Fornitura di pacchetti personalizzati di piping per la costruzione e il ricondizionamento di impianti chimici e petrolchimici: valvole, tubi, flange e raccordi coordinati in un’unica commessa.',
-    highlights: ['Kit su distinta', 'Tracciabilità lotti', 'Consegne programmate'],
+      'Valvole, tubi, flange, raccordi e accessori per linee di processo e continuità di esercizio.',
   },
   {
-    id: 'service-valvole',
-    title: 'Service valvole',
+    id: 'pacchetti-piping',
+    title: 'Pacchetti completi piping',
     description:
-      'Riparazione, revisione e taratura di valvole di sicurezza e di controllo al banco, con report di collaudo e collaudi presenziati INAIL.',
-    highlights: ['Prove al banco', 'Collaudi INAIL', 'Documentazione di collaudo'],
+      'Fornitura coordinata su distinta per costruzione e ricondizionamento di impianti.',
+  },
+  {
+    id: 'revisione-riparazione',
+    title: 'Revisione e riparazione valvole',
+    description: 'Interventi su valvole di processo e di controllo, con report di lavorazione.',
+  },
+  {
+    id: 'taratura-sicurezza',
+    title: 'Revisione e taratura valvole di sicurezza e di regolazione',
+    description: 'Prove al banco, taratura e documentazione di collaudo.',
+  },
+  {
+    id: 'approvvigionamento',
+    title: 'Approvvigionamento su specifica',
+    description: 'Ricerca e fornitura secondo materiale, norma, pressione e tempi richiesti.',
+  },
+  {
+    id: 'consulenza-tecnica',
+    title: 'Consulenza tecnica',
+    description: 'Supporto su materiali, normative e alternative di prodotto per la vostra linea.',
+  },
+  {
+    id: 'gestione-forniture',
+    title: 'Gestione forniture',
+    description: 'Coordinamento di ordini, disponibilità e consegne in un unico canale.',
+  },
+  {
+    id: 'inail-psv',
+    title: 'Certificazione INAIL per revisione e taratura valvole PSV',
+    description: 'Collaudi presenziati INAIL sulle valvole di sicurezza, con documentazione di taratura.',
     featured: true,
   },
   {
-    id: 'realizzazioni',
-    title: 'Realizzazioni su misura',
-    description:
-      'Lavorazioni meccaniche di tornitura e fresatura per piccoli componenti: flange di misura, stub end, attacchi LAS e pezzi a disegno.',
-    highlights: ['Flange di misura', 'Stub end', 'Attacchi LAS'],
-  },
-  {
-    id: 'magazzino-consegne',
-    title: 'Magazzino e consegne',
-    description:
-      'Ampio magazzino di valvole, tubi, flange e raccordi. Consegne con mezzi propri o corrieri convenzionati, anche in urgenza di manutenzione.',
-    highlights: ['Stock a magazzino', 'Spedizioni nazionali', 'Sopralluoghi tecnici'],
+    id: 'supporto-commerciale',
+    title: 'Supporto commerciale',
+    description: 'Risposte su disponibilità, distinte e follow-up della richiesta.',
   },
 ]
 
@@ -635,12 +653,12 @@ export const strengths = [
   {
     id: 'partner',
     title: 'Partner selezionati',
-    description: 'Rete di produttori di riferimento, tra cui 4G Ghidini, AZ Armaturen e Zema.',
+    description: 'Rete di produttori di riferimento, tra cui 4G Ghidini e AZ Armaturen.',
   },
   {
     id: 'preventivo',
     title: 'Richiesta rapida',
-    description: 'Canale diretto con Riccardo per distinte, specifiche e alternative.',
+    description: 'Canale diretto con il servizio clienti per distinte, specifiche e alternative.',
   },
 ]
 
@@ -649,7 +667,7 @@ export const timeline = [
     year: '1986',
     title: 'Fondazione',
     description:
-      'Nasce Arteco — Articoli Tecnico Commerciali — per la fornitura di valvole e pacchetti completi di componenti piping.',
+      'Nasce Arteco (Articoli Tecnico Commerciali) per la fornitura di valvole e pacchetti completi di componenti piping.',
   },
   {
     year: 'Magazzino',
@@ -688,21 +706,18 @@ export const testimonials = [
   {
     id: 'qualita',
     name: 'Qualità',
-    company: 'Arteco S.r.l.',
     quote:
       'Qualità è soddisfare le necessità del cliente e superare le sue stesse aspettative, continuando a migliorarsi.',
   },
   {
     id: 'partner',
     name: 'Affiancamento',
-    company: 'Arteco S.r.l.',
     quote:
       'Professionalità, affidabilità e tempestività: le basi per un servizio puntuale, con un interlocutore unico su valvole e piping.',
   },
   {
     id: 'cliente',
     name: 'Orientamento al cliente',
-    company: 'Arteco S.r.l.',
     quote: 'A satisfied customer is the best business strategy of all.',
   },
 ]
@@ -720,7 +735,7 @@ export const copy = {
   about: {
     kicker: 'Chi siamo',
     title: 'Articoli tecnico commerciali',
-    p1: 'Arteco S.r.l. — Articoli Tecnico Commerciali — nasce nel 1986 con la mission di supportare i clienti nella fornitura di valvole e pacchetti completi di componenti piping.',
+    p1: 'Arteco S.r.l. (Articoli Tecnico Commerciali) nasce nel 1986 con la mission di supportare i clienti nella fornitura di valvole e pacchetti completi di componenti piping.',
     p2Before: 'Per un funzionamento efficiente e affidabile dei sistemi di tubazioni è essenziale che i componenti siano di ',
     p2Strong: 'alta qualità',
     p2After:
@@ -784,14 +799,14 @@ export const copy = {
   cta: {
     title: 'Avete una distinta o una specifica da caricare?',
     lead: 'Inviate il materiale all’ufficio acquisti: vi ricontattiamo con disponibilità e alternative.',
-    mail: 'Scrivi a Riccardo',
+    mail: 'Scrivi al servizio clienti',
     form: 'Apri il form',
     quote: 'Richiedi informazioni',
   },
   services: {
     kicker: 'Servizi',
-    title: 'Oltre la fornitura',
-    lead: 'Pacchetti piping, service valvole con collaudi INAIL e lavorazioni su misura.',
+    title: 'I servizi Arteco',
+    lead: 'Fornitura, pacchetti piping, revisione valvole, collaudi INAIL e supporto tecnico-commerciale.',
     featuredBadge: 'Servizio distintivo',
     viewAll: 'Scopri i servizi',
   },
@@ -803,9 +818,7 @@ export const copy = {
   certifications: {
     kicker: 'Conformità',
     title: 'Etichette e standard',
-    lead: 'Etichette indicative di conformità — verificare sempre i requisiti specifici del vostro impianto.',
-    disclaimer:
-      'Le etichette PED, ATEX e FDA sono indicative. Per claim legali e certificazioni ufficiali contattare il referente commerciale.',
+    lead: 'Etichette indicative di conformità, verificare sempre i requisiti specifici del vostro impianto.',
   },
   testimonials: {
     kicker: 'Principi',
@@ -814,7 +827,7 @@ export const copy = {
   contact: {
     kicker: 'Informazioni',
     title: 'Parliamo della vostra distinta',
-    lead: 'Compilate il modulo o scrivete a buyer@artecovalvole.it. Referente: Riccardo.',
+    lead: 'Compilate il modulo o scrivete a buyer@artecovalvole.it. Risponde il servizio clienti.',
     name: 'Nome e cognome',
     namePlaceholder: 'Es. Mario Rossi',
     company: 'Azienda',
@@ -836,7 +849,7 @@ export const copy = {
     sending: 'Invio in corso…',
     sentTitle: 'Richiesta inviata',
     sentBody: (name) =>
-      `Grazie ${name}. Abbiamo registrato la vostra richiesta: Riccardo vi contatterà a breve all’indirizzo indicato.`,
+      `Grazie ${name}. Abbiamo registrato la vostra richiesta: il servizio clienti vi contatterà a breve all’indirizzo indicato.`,
     sendAnother: 'Invia un’altra richiesta',
     errorBody:
       'Non siamo riusciti a inviare la richiesta. Riprovate tra qualche minuto o contattateci direttamente via email.',
@@ -845,7 +858,7 @@ export const copy = {
     address: 'Sede',
     phones: 'Telefono',
     fax: 'Fax',
-    mapTitle: 'Sede Arteco S.r.l. — Via Bergamina 36, Nerviano',
+    mapTitle: 'Sede Arteco S.r.l., Via Bergamina 36, Nerviano',
     mapLoad: 'Carica mappa Google',
     mapPrivacy:
       'La mappa è un servizio di Google: viene caricata solo dopo questo clic, per non installare cookie di terze parti in automatico.',
@@ -883,7 +896,9 @@ export const quoteProductOptions = [
   'Valvole a maschio',
   'Accessori',
   'Arredo inox',
-  'Pacchetto piping',
-  'Service valvole / PSV',
+  'Pacchetti piping',
+  'Revisione valvole',
+  'Taratura PSV / INAIL',
+  'Consulenza tecnica',
   'Altro',
 ]

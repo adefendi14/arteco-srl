@@ -63,7 +63,7 @@ export default function QuoteForm() {
     try {
       const payload = new FormData()
       payload.append('access_key', accessKey)
-      payload.append('subject', `[Richiesta Arteco] ${form.product} — ${form.company}`)
+      payload.append('subject', `[Richiesta Arteco] ${form.product}, ${form.company}`)
       payload.append('from_name', form.name)
       payload.append('name', form.name)
       payload.append('email', form.email)
@@ -314,7 +314,7 @@ export default function QuoteForm() {
           {status === 'sending' ? content.sending : content.submit}
         </button>
         <p className="mt-4 text-xs text-ink/50">
-          Referente commerciale: {company.referent} · {company.email}
+          {company.referent}: {company.email}
         </p>
       </div>
     </form>
