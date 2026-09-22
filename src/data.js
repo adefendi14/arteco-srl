@@ -21,8 +21,7 @@ export const company = {
   phone: '+39 0331 415325',
   phoneAlt: '+39 0331 588443',
   fax: '+39 0331 416237',
-  email: 'buyer@artecovalvole.it',
-  emailInfo: 'info@artecovalvole.it',
+  email: 'info@artecovalvole.it',
   pec: 'artecopec@pec.artecovalvole.it',
   referent: 'Servizio clienti',
   vat: 'P.IVA e C.F. 03800210969',
@@ -202,8 +201,6 @@ export const productCategories = [
     ],
     specs: [
       { label: 'Materiali', value: 'AISI 304 / 316' },
-      { label: 'Range DN', value: 'Non applicabile, arredo su misura' },
-      { label: 'Pressione', value: 'Non applicabile' },
       { label: 'Normative', value: 'Su misura per aree produttive, farmaceutica e biomedicale' },
       { label: 'Documentazione', value: 'FDA dove richiesto' },
     ],
@@ -827,7 +824,7 @@ export const copy = {
   contact: {
     kicker: 'Informazioni',
     title: 'Parliamo della vostra distinta',
-    lead: 'Compilate il modulo o scrivete a buyer@artecovalvole.it. Risponde il servizio clienti.',
+    lead: 'Compilate il modulo o scrivete a info@artecovalvole.it. Risponde il servizio clienti.',
     name: 'Nome e cognome',
     namePlaceholder: 'Es. Mario Rossi',
     company: 'Azienda',

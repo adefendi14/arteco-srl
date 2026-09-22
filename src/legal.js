@@ -30,8 +30,7 @@ export const legalPages = {
           {
             type: 'ul',
             items: [
-              `Email commerciale: ${company.email}`,
-              `Email: ${company.emailInfo}`,
+              `Email: ${company.email}`,
               `Telefono: ${company.phone} · ${company.phoneAlt}`,
               `PEC: ${company.pec}`,
               company.vat,
@@ -262,8 +261,7 @@ export const legalPages = {
               `REA: ${company.rea}`,
               `PEC: ${company.pec}`,
               `Capitale sociale: ${company.shareCapital}`,
-              `Email commerciale: ${company.email}`,
-              `Email: ${company.emailInfo}`,
+              `Email: ${company.email}`,
               `Telefono: ${company.phone} · ${company.phoneAlt}`,
               `Fax: ${company.fax}`,
               `Contatto indicato sul sito: ${company.referent}`,
