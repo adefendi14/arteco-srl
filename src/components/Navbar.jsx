@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-cream/95 backdrop-blur-md">
-      <div className="mx-auto flex h-[4.75rem] max-w-6xl items-center justify-between gap-4 px-5 md:px-8">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-4 sm:gap-4 sm:px-5 md:h-[4.75rem] md:px-8">
         <Logo onClick={close} />
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Navigazione principale">
@@ -89,7 +89,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/20 bg-cream text-ink transition-colors duration-300 hover:border-terracotta hover:text-terracotta lg:hidden"
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ink/20 md:h-11 md:w-11 bg-cream text-ink transition-colors duration-300 hover:border-terracotta hover:text-terracotta lg:hidden"
             aria-expanded={open}
             aria-controls="menu-mobile"
             aria-label={open ? 'Chiudi menu' : 'Apri menu'}
@@ -118,7 +118,7 @@ export default function Navbar() {
       </div>
 
       <div id="menu-mobile" hidden={!open} className="border-t border-ink/8 bg-cream lg:hidden">
-        <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-6" aria-label="Navigazione mobile">
+        <nav className="mx-auto flex max-w-6xl flex-col gap-0.5 px-4 py-4 sm:px-5 sm:py-6" aria-label="Navigazione mobile">
           {navLinks.map((link) => (
             <div key={link.href}>
               <Link

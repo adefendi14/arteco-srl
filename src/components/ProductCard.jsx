@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
         ratio="5 / 4"
         rounded="rounded-none"
       />
-      <div className="flex flex-1 flex-col p-5">
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
         <h3 className="text-xl font-semibold leading-snug text-ink">{copy.name}</h3>
         <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/65">
           {copy.description}
@@ -54,7 +54,7 @@ export default function ProductCard({ product }) {
 
 export function ProductGrid({ items }) {
   return (
-    <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+    <div className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4">
       {items.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}

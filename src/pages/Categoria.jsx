@@ -16,7 +16,7 @@ export default function Categoria() {
   return (
     <>
       <section className="bg-cream">
-        <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
+        <div className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-20">
           <nav className="text-sm text-ink/50" aria-label="Percorso">
             <Link to="/" className="transition-colors hover:text-terracotta">
               {content.breadcrumbHome}
@@ -28,7 +28,7 @@ export default function Categoria() {
             <span className="mx-2">/</span>
             <span className="text-ink/70">{category.label}</span>
           </nav>
-          <div className="mt-8 grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <div className="mt-6 grid items-center gap-6 sm:mt-8 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <SectionHeader kicker={content.kicker} title={category.label} lead={category.excerpt} />
             <Placeholder
               label={category.label}
@@ -42,13 +42,19 @@ export default function Categoria() {
       </section>
 
       <section className="bg-sand/70">
-        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-          <h2 className="text-2xl font-semibold tracking-tight text-ink">{content.subtypesTitle}</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-20">
+          {!category.hideSubtypesTitle && (
+            <h2 className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">{content.subtypesTitle}</h2>
+          )}
+          <div
+            className={`grid gap-4 sm:grid-cols-2 ${category.subtypes.length >= 3 ? 'lg:grid-cols-3' : ''} ${
+              category.hideSubtypesTitle ? '' : 'mt-8'
+            }`}
+          >
             {category.subtypes.map((subtype) => (
-              <article key={subtype.name} className="rounded-2xl border border-ink/8 bg-cream px-5 py-5">
+              <article key={subtype.name} className="rounded-2xl border border-ink/8 bg-cream px-4 py-4 sm:px-5 sm:py-5">
                 <h3 className="font-semibold text-ink">{subtype.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink/65">{subtype.description}</p>
+                <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-ink/65">{subtype.description}</p>
               </article>
             ))}
           </div>
@@ -56,8 +62,8 @@ export default function Categoria() {
       </section>
 
       <section className="bg-cream">
-        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-          <h2 className="text-2xl font-semibold tracking-tight text-ink">{content.specsTitle}</h2>
+        <div className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-20">
+          <h2 className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">{content.specsTitle}</h2>
           <dl className="mt-8 divide-y divide-ink/10 overflow-hidden rounded-2xl border border-ink/8 bg-sand/50">
             {category.specs.map((spec) => (
               <div key={spec.label} className="grid gap-1 px-5 py-4 sm:grid-cols-[12rem_1fr] sm:gap-8">
@@ -70,8 +76,8 @@ export default function Categoria() {
       </section>
 
       <section className="bg-sand/70">
-        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-          <h2 className="text-2xl font-semibold tracking-tight text-ink">{content.rangeTitle}</h2>
+        <div className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-24">
+          <h2 className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">{content.rangeTitle}</h2>
           <ProductGrid items={items} />
           <div className="mt-12">
             <Link

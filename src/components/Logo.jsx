@@ -8,7 +8,7 @@ export default function Logo({ onClick }) {
       <img
         src={asset('logo-arteco.png')}
         alt={company.name}
-        className="h-10 w-auto shrink-0 object-contain bg-transparent transition-opacity duration-300 group-hover:opacity-85 sm:h-11"
+        className="h-8 w-auto shrink-0 object-contain bg-transparent transition-opacity duration-300 group-hover:opacity-85 sm:h-10 md:h-11"
         width={1211}
         height={580}
       />

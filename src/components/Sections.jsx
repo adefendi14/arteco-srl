@@ -22,7 +22,7 @@ export function AboutPreview() {
 
   return (
     <section className="bg-sand/70">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-12 md:gap-10 md:px-8 md:py-28 lg:grid-cols-2 lg:gap-16">
         <Placeholder
           label={about.imageAlt}
           src={about.imageSrc}
@@ -60,7 +60,7 @@ export function TargetPreview() {
 
   return (
     <section className="bg-cream">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-28">
         <SectionHeader kicker={content.kicker} title={content.title} lead={content.lead} align="center" />
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {audiences.map((item) => (
@@ -80,7 +80,7 @@ export function StrengthsSection() {
 
   return (
     <section className="bg-cream">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-28">
         <SectionHeader kicker={content.kicker} title={content.title} align="center" />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {strengths.map((item) => (
@@ -100,7 +100,7 @@ export function SectorsPreview() {
 
   return (
     <section className="bg-sand/70">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-28">
         <SectionHeader kicker={content.kicker} title={content.title} lead={content.lead} />
         <div className="mt-12 flex flex-wrap gap-3">
           {sectors.map((sector) => (
@@ -131,7 +131,7 @@ export function ProductsPreview() {
 
   return (
     <section className="bg-cream">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-28">
         <SectionHeader
           kicker={content.kicker}
           title={content.title}
@@ -186,7 +186,7 @@ export function ServicesPreview() {
 
   return (
     <section className="bg-sand/80">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-28">
         <SectionHeader
           kicker={content.kicker}
           title={content.title}
@@ -243,7 +243,7 @@ export function PartnersSection() {
 
   return (
     <section className="bg-cream">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-28">
         <SectionHeader
           kicker={content.kicker}
           title={content.title}
@@ -273,7 +273,7 @@ export function CertificationsSection() {
 
   return (
     <section className="bg-sand/70">
-      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+      <div className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-20">
         <SectionHeader
           kicker={content.kicker}
           title={content.title}
@@ -300,7 +300,7 @@ export function TestimonialsSection() {
 
   return (
     <section className="bg-cream">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-28">
         <SectionHeader kicker={content.kicker} title={content.title} align="center" />
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {testimonials.map((item) => (
@@ -320,7 +320,7 @@ export function CtaBanner() {
 
   return (
     <section className="bg-bordeaux text-cream">
-      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 py-14 md:flex-row md:items-center md:px-8">
+      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-5 px-5 py-10 md:flex-row md:items-center md:px-8">
         <div>
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">{content.title}</h2>
           <p className="mt-3 max-w-xl text-cream/65">{content.lead}</p>

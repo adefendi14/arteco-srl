@@ -16,7 +16,7 @@ export default function Azienda() {
   return (
     <>
       <section className="bg-cream">
-        <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
+        <div className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-20">
           <SectionHeader kicker={content.kicker} title={content.title} />
         </div>
       </section>
@@ -74,7 +74,7 @@ export default function Azienda() {
       </section>
 
       <section className="bg-cream">
-        <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">
+        <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-24">
           <SectionHeader kicker={copy.timeline.kicker} title={copy.timeline.title} lead={copy.timeline.lead} />
           <ol className="mt-12 grid gap-6 md:grid-cols-3">
             {timeline.map((step) => (
@@ -89,14 +89,14 @@ export default function Azienda() {
       </section>
 
       <section className="bg-sand/70">
-        <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">
+        <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-24">
           <SectionHeader kicker={copy.mission.kicker} title={copy.mission.title} />
           <p className="mt-8 max-w-3xl text-lg leading-relaxed text-ink/70">{copy.mission.text}</p>
         </div>
       </section>
 
       <section className="bg-cream">
-        <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">
+        <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-24">
           <SectionHeader kicker={copy.values.kicker} title={copy.values.title} />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {companyValues.map((item) => (
@@ -110,7 +110,7 @@ export default function Azienda() {
       </section>
 
       <section className="bg-sand/70">
-        <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-28">
           <SectionHeader kicker={copy.target.kicker} title={copy.target.title} lead={copy.target.lead} />
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {audiences.map((item) => (

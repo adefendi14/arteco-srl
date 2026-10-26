@@ -65,6 +65,11 @@ export const sectors = [
     description: 'Valvole e raccordi per classificazione, continuità di esercizio e servizi gravosi.',
   },
   {
+    id: 'ingegneria',
+    name: 'Ingegneria',
+    description: 'Componenti e pacchetti piping per progettisti, uffici tecnici e commesse di impianto.',
+  },
+  {
     id: 'petrolchimico',
     name: 'Petrolchimico',
     description: 'Pacchetti per costruzione e ricondizionamento di linee di cracking e raffinazione.',
@@ -101,17 +106,13 @@ export const productCategories = [
     id: 'tubi',
     label: 'Tubi',
     href: '/prodotti/tubi',
-    excerpt: 'Inox, carbonio e tubing per linee di processo e strumentazione.',
+    excerpt: 'Acciaio inox, carbonio e tubing per linee di processo e strumentazione.',
     subtypes: [
       { name: 'Serie standard', description: 'ASTM A312, A106 e API 5L da magazzino.' },
-      { name: 'Su specifica', description: 'Duplex, superduplex, 904L e leghe speciali.' },
       { name: 'Materiali', description: 'AISI 304/L, 316/L, carbonio e zincati.' },
     ],
     specs: [
-      { label: 'Materiali', value: 'AISI 304/L · 316/L · A106 Gr.B · API 5L' },
       { label: 'Range DN', value: 'Da ½" a 24", altri diametri su richiesta' },
-      { label: 'Pressione', value: 'Secondo schedula ASTM / ASME (B36.10 e B36.19)' },
-      { label: 'Normative', value: 'ASTM A312 · ANSI B36.19 / B36.10 · ASTM A213 / A269' },
       { label: 'Documentazione', value: '3.1 / PED su richiesta' },
     ],
   },
@@ -120,15 +121,21 @@ export const productCategories = [
     label: 'Flange',
     href: '/prodotti/flange',
     excerpt: 'EN 1092-1, ASME B16.5 e realizzazioni a disegno.',
+    hideSubtypesTitle: true,
     subtypes: [
-      { name: 'Serie standard', description: 'Piane, WN, cieche, slip-on, filettate e libere.' },
-      { name: 'Su specifica', description: 'Flange di misura, anelli di drenaggio, duplex e superleghe.' },
-      { name: 'Materiali', description: 'Inox A182, carbonio A105, P245GH, LF2.' },
+      {
+        name: 'Tipologie',
+        description:
+          'EN 1092-1 / ANSI: piane, collarino, cieche, filettate, libere, anelli d’appoggio · Slip-on, welding neck, blind, socket welding, lap joint.',
+      },
+      { name: 'Materiali', description: 'Acciaio inossidabile: ASTM / ASME SA 182 F304, SS304L, SS304H, SS309S, SS310S, SS316, SS316Ti, SS317L, SS321, SS347, SS904L.\nAcciaio al carbonio: ASTM A105 – P245GH – P250GH – ASTM A350 LF2.' },
     ],
     specs: [
-      { label: 'Materiali', value: 'A182 F304/L–F316/L · A105 · LF2 · P245GH' },
-      { label: 'Range DN', value: 'EN 1092-1 e ASME B16.5, classi ANSI 150–1500' },
-      { label: 'Pressione', value: 'PN e classi ANSI 150–1500, superiori su richiesta' },
+      {
+        label: 'Materiali',
+        value: 'A182 F304/L–F316/L · A105 · LF2 · P245GH · Monel 400 · HC276 · Alloy 600',
+      },
+      { label: 'Range DN', value: '½" – 24"' },
       { label: 'Normative', value: 'EN 1092-1 · ASME B16.5' },
       { label: 'Documentazione', value: '3.1 / PED su richiesta' },
     ],
@@ -263,7 +270,7 @@ export const products = [
   {
     id: 'dischi-reversibili',
     category: 'flange',
-    material: 'AISI 316',
+    material: 'AISI 316 · SAF 2205 · HC276 · PVDF',
     norm: 'Spectacle blind',
     tags: [],
     image: 'images/products/dischi-reversibili.jpg',
@@ -598,9 +605,9 @@ export const services = [
 ]
 
 export const companyStats = [
-  { label: 'Fondazione', value: '1986' },
-  { label: 'Esperienza', value: '40 anni' },
-  { label: 'Settori serviti', value: '9' },
+  { label: 'Fondazione', value: '1983' },
+  { label: 'Esperienza', value: '43 anni' },
+  { label: 'Settori serviti', value: '10' },
 ]
 
 export const audiences = [
@@ -661,10 +668,10 @@ export const strengths = [
 
 export const timeline = [
   {
-    year: '1986',
+    year: '1983',
     title: 'Fondazione',
     description:
-      'Nasce Arteco (Articoli Tecnico Commerciali) per la fornitura di valvole e pacchetti completi di componenti piping.',
+      'Nasce Arteco (Articoli Tecnico Commerciali) nel settore oil & gas, chimico e ingegneria, per la fornitura di valvole e componenti piping.',
   },
   {
     year: 'Magazzino',
@@ -732,12 +739,12 @@ export const copy = {
   about: {
     kicker: 'Chi siamo',
     title: 'Articoli tecnico commerciali',
-    p1: 'Arteco S.r.l. (Articoli Tecnico Commerciali) nasce nel 1986 con la mission di supportare i clienti nella fornitura di valvole e pacchetti completi di componenti piping.',
+    p1: 'Arteco S.r.l. (Articoli Tecnico Commerciali) nasce nel 1983 nel settore oil & gas, chimico e ingegneria, con la mission di supportare i clienti nella fornitura di valvole e pacchetti completi di componenti piping.',
     p2Before: 'Per un funzionamento efficiente e affidabile dei sistemi di tubazioni è essenziale che i componenti siano di ',
     p2Strong: 'alta qualità',
     p2After:
       '. Nel corso degli anni Arteco si è fatta apprezzare per professionalità, qualità, affidabilità e tempestività.',
-    p3: 'Capacità di affiancamento e risposte concrete hanno fatto di Arteco un partner per i poli chimici, farmaceutici, petrolchimici ed energetici. Accanto alla commercializzazione, è consolidata l’attività di service valvole: revisione, taratura e collaudo delle valvole di sicurezza.',
+    p3: 'Nata nei settori oil & gas, chimico e ingegneria, Arteco è oggi partner anche per poli farmaceutici, petrolchimici ed energetici. Accanto alla commercializzazione, è consolidata l’attività di service valvole: revisione, taratura e collaudo delle valvole di sicurezza.',
     statsNote: '',
     imageAlt: 'Magazzino con tubi, flange e componenti piping a stock',
     imageSrc: asset('images/about.jpg'),
@@ -782,7 +789,7 @@ export const copy = {
   timeline: {
     kicker: 'Storia',
     title: 'Dalla fondazione a oggi',
-    lead: 'Articoli tecnico commerciali dal 1986, con sede a Nerviano alle porte di Milano.',
+    lead: 'Articoli tecnico commerciali dal 1983, con sede a Nerviano alle porte di Milano.',
   },
   mission: {
     kicker: 'Mission',

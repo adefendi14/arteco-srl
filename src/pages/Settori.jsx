@@ -7,7 +7,7 @@ export default function Settori() {
 
   return (
     <section className="bg-cream">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-28">
         <SectionHeader kicker={content.kicker} title="Settori di applicazione" lead={content.lead} />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {sectors.map((sector) => (

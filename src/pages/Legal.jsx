@@ -69,7 +69,7 @@ export default function LegalPage({ doc }) {
 
   return (
     <article className="bg-cream">
-      <div className="mx-auto max-w-3xl px-5 py-14 md:px-8 md:py-20">
+      <div className="mx-auto max-w-3xl px-5 py-10 md:px-8 md:py-20">
         <header>
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-gold">{page.kicker}</p>
           <div className="mt-3 h-px w-10 bg-gold/70" />

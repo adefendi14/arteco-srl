@@ -5,7 +5,7 @@ import Logo from './Logo'
 export default function Footer() {
   return (
     <footer className="bg-ink text-cream">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3 md:px-8">
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-10 md:grid-cols-3 md:gap-10 md:px-8">
         <div>
           <Logo />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream/60">
@@ -77,7 +77,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-cream/10">
-        <p className="mx-auto max-w-6xl px-5 py-5 text-center text-xs text-cream/40 md:px-8 md:text-left">
+        <p className="mx-auto max-w-6xl px-4 py-4 text-center text-xs text-cream/40 sm:px-5 md:px-8 md:text-left">
           © {new Date().getFullYear()} {company.name}. {copy.footer.rights}
         </p>
       </div>

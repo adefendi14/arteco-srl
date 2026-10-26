@@ -7,10 +7,10 @@ export default function SectionHeader({ kicker, title, lead, align = 'left' }) {
         {kicker}
       </p>
       <div className={`mt-3 h-px w-10 bg-gold/70 ${centered ? 'mx-auto' : ''}`} />
-      <h2 className="mt-5 text-4xl font-semibold tracking-tight text-ink md:text-[2.75rem]">
+      <h2 className="mt-3 text-[1.75rem] font-semibold tracking-tight text-ink sm:mt-5 sm:text-4xl md:text-[2.75rem]">
         {title}
       </h2>
-      {lead && <p className="mt-4 text-ink/65">{lead}</p>}
+      {lead && <p className="mt-3 text-[0.95rem] leading-relaxed text-ink/65 sm:mt-4 sm:text-base">{lead}</p>}
     </div>
   )
 }

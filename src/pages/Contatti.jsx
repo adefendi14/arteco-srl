@@ -8,7 +8,7 @@ export default function Contatti() {
 
   return (
     <section className="bg-sand/70">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:gap-10 md:px-8 md:py-28 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div>
           <SectionHeader kicker={content.kicker} title={content.title} lead={content.lead} />
           <div id="preventivo" className="mt-8 scroll-mt-28">

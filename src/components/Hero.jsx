@@ -28,7 +28,7 @@ export default function Hero() {
   const imageScale = 1 + scrollProgress * 0.08
 
   return (
-    <section ref={sectionRef} className="relative h-[calc(100svh-4.75rem)] min-h-[28rem] overflow-hidden">
+    <section ref={sectionRef} className="relative h-[calc(100svh-3.5rem)] min-h-[24rem] overflow-hidden md:h-[calc(100svh-4.75rem)] md:min-h-[28rem]">
       <div
         className="absolute inset-0 will-change-transform"
         style={{ transform: `scale(${imageScale})` }}
@@ -67,7 +67,7 @@ export default function Hero() {
       </div>
 
       <div
-        className="relative z-10 flex h-full flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-24"
+        className="relative z-10 flex h-full flex-col justify-end px-4 pb-12 pt-20 sm:px-5 sm:pb-16 sm:pt-28 md:px-8 md:pb-24"
         style={{ opacity: contentOpacity }}
       >
         <div className="mx-auto w-full max-w-6xl">
@@ -82,7 +82,7 @@ export default function Hero() {
           </p>
 
           <h1
-            className={`mt-6 max-w-4xl text-balance text-[2.15rem] font-semibold leading-[1.12] tracking-tight text-cream sm:text-5xl lg:text-[3.6rem] transition-all duration-1000 ease-out ${
+            className={`mt-4 max-w-4xl text-balance text-[1.85rem] font-semibold leading-[1.12] tracking-tight text-cream sm:mt-6 sm:text-5xl lg:text-[3.6rem] transition-all duration-1000 ease-out ${
               loaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
             style={{ transitionDelay: '260ms' }}
@@ -91,7 +91,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className={`mt-6 max-w-2xl text-[1.02rem] leading-relaxed text-cream/75 transition-all duration-1000 ease-out ${
+            className={`mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-cream/75 sm:mt-6 sm:text-[1.02rem] transition-all duration-1000 ease-out ${
               loaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
             style={{ transitionDelay: '400ms' }}
@@ -100,20 +100,20 @@ export default function Hero() {
           </p>
 
           <div
-            className={`mt-8 flex flex-wrap gap-3 transition-all duration-1000 ease-out ${
+            className={`mt-6 flex flex-wrap gap-2.5 sm:mt-8 sm:gap-3 transition-all duration-1000 ease-out ${
               loaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
             style={{ transitionDelay: '540ms' }}
           >
             <Link
               to="/prodotti"
-              className="inline-flex items-center justify-center rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-bordeaux"
+              className="inline-flex items-center justify-center rounded-full bg-terracotta px-5 py-2.5 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-bordeaux sm:px-6 sm:py-3"
             >
               {content.ctaProducts}
             </Link>
             <Link
               to="/contatti#preventivo"
-              className="inline-flex items-center justify-center rounded-full border border-cream/30 bg-cream/10 px-6 py-3 text-sm font-semibold text-cream backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+              className="inline-flex items-center justify-center rounded-full border border-cream/30 bg-cream/10 px-5 py-2.5 text-sm font-semibold text-cream backdrop-blur-sm sm:px-6 sm:py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
             >
               {content.ctaQuote}
             </Link>
@@ -122,7 +122,7 @@ export default function Hero() {
       </div>
 
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-6 z-10 flex flex-col items-center gap-2 text-cream/50 transition-opacity duration-500"
+        className="pointer-events-none absolute inset-x-0 bottom-4 z-10 sm:bottom-6 flex flex-col items-center gap-2 text-cream/50 transition-opacity duration-500"
         style={{ opacity: 1 - scrollProgress * 2 }}
         aria-hidden="true"
       >
